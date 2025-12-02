@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="menu-container">
+  <div><i class="pi pi-times-circle" (click)="onCloseMenuClick()"></i></div>
+  <div class="menu-container__items">
+    <ng-container *ngFor="let categories of menuItems; let i = index;">
+      <div class="menu-container__items__section">
+        <h2>{{ categories?.label }}</h2>
+        <ng-container *ngFor="let item of categories?.items; let i = index;">
+          <a>{{ item }}</a>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>

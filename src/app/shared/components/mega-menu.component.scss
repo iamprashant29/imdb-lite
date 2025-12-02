@@ -1,0 +1,43 @@
+@import "../../shared/_variables.scss";
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  gap: 24px;
+
+  i {
+    font-size: 40px;
+    border-radius: 50%;
+    border-width: 0;
+    color: map-get($colors, yellow);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__items {
+    display: flex;
+    color: #ffffff;
+    font-weight: bold;
+    gap: 84px;
+    flex-wrap: wrap;
+
+    &__section {
+      h2 {
+        color: map-get($colors, yellow);
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 250px;
+      gap: 24px;
+
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
