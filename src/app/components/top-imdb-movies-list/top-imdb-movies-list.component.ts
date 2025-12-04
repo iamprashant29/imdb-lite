@@ -6,17 +6,25 @@ import {Image} from 'primeng/image';
 import {InputIcon} from 'primeng/inputicon';
 import {InputText} from 'primeng/inputtext';
 import {MegaMenuComponent} from '../../shared/components/mega-menu/mega-menu.component';
-import {NgIf} from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
 import {Ripple} from 'primeng/ripple';
+import {Card} from 'primeng/card';
+import {Tag} from 'primeng/tag';
 
 @Component({
   selector: 'top-imdb-movies-list',
   templateUrl: './top-imdb-movies-list.component.html',
-  styleUrls: ['./top-imdb-movies-list.component.scss']
+  styleUrls: ['./top-imdb-movies-list.component.scss'],
+  imports: [
+    Card,
+    Image,
+    NgForOf,
+    Tag
+  ],
 
 })
 export class TopImdbMoviesListComponent implements OnInit {
-  imdbTopMoviesList = [];
+  imdbTopMoviesList: any[] = [];
 
   constructor(private moviesService: MoviesService) {}
 
