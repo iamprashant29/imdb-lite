@@ -8,6 +8,7 @@ import { Card } from 'primeng/card';
 import { Tag } from 'primeng/tag';
 import { RunningTimeComponent } from '../../shared/pipes/running-time.pipe';
 import { VotesCountPipe } from '../../shared/pipes/votes-count.pipe';
+import { Button } from 'primeng/button';
 
 @Component({
   selector: 'top-imdb-movies-list',
@@ -21,7 +22,8 @@ import { VotesCountPipe } from '../../shared/pipes/votes-count.pipe';
     RunningTimeComponent,
     Chip,
     Ripple,
-    VotesCountPipe
+    VotesCountPipe,
+    Button
   ],
 
 })

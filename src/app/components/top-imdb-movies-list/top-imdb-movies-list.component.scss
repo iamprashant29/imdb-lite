@@ -24,42 +24,67 @@
 
   &__card {
     display: flex;
-    gap: 12px;
 
-    &__image {
-      border-radius: 5px;
-    }
-
-    &__details {
+    &__content {
       display: flex;
-      flex-direction: column;
+      flex-basis: 80%;
       gap: 12px;
 
-      p-tag {
-        width: fit-content;
-      }
-
-      .title {
-        font-size: 18px;
-        font-weight: bold;
-        color: map-get($colors, black);
+      &__image {
+        border-radius: 5px;
 
         &:hover {
-          color: map-get($colors, gray);
+          cursor: pointer;
         }
       }
 
-      .movie-details {
+      &__details {
         display: flex;
+        flex-direction: column;
         gap: 12px;
-        font-size: 15px;
-        font-weight: bold;
-        color: map-get($colors, gray);
+
+        p-tag {
+          width: fit-content;
+        }
+
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+          color: map-get($colors, black);
+
+          &:hover {
+            color: map-get($colors, gray);
+            cursor: pointer;
+          }
+        }
+
+        .movie-details {
+          display: flex;
+          gap: 12px;
+          font-size: 15px;
+          font-weight: bold;
+          color: map-get($colors, gray);
+
+          p-chip {
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
 
-    &:hover {
-      cursor: pointer;
+    &__info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+       i {
+         font-size: 24px;
+       }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
