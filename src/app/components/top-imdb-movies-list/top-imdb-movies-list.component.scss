@@ -39,13 +39,22 @@
         width: fit-content;
       }
 
-      span {
+      .title {
         font-size: 18px;
         font-weight: bold;
+        color: map-get($colors, black);
 
         &:hover {
-          color: #808080;
+          color: map-get($colors, gray);
         }
+      }
+
+      .movie-details {
+        display: flex;
+        gap: 12px;
+        font-size: 15px;
+        font-weight: bold;
+        color: map-get($colors, gray);
       }
     }
 
@@ -61,6 +70,14 @@
 
     img {
       border-radius: 5px;
+    }
+
+    .p-tag-contrast {
+      background: map-get($colors, dodgerblue);
+    }
+
+    .pi-star-fill {
+      color: map-get($colors, yellow);
     }
   }
 }

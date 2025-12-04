@@ -1,15 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
-import {Chip} from 'primeng/chip';
-import {IconField} from 'primeng/iconfield';
-import {Image} from 'primeng/image';
-import {InputIcon} from 'primeng/inputicon';
-import {InputText} from 'primeng/inputtext';
-import {MegaMenuComponent} from '../../shared/components/mega-menu/mega-menu.component';
-import {NgForOf, NgIf} from '@angular/common';
-import {Ripple} from 'primeng/ripple';
-import {Card} from 'primeng/card';
-import {Tag} from 'primeng/tag';
+import { Chip } from 'primeng/chip';
+import { Image} from 'primeng/image';
+import { NgForOf } from '@angular/common';
+import { Ripple } from 'primeng/ripple';
+import { Card } from 'primeng/card';
+import { Tag } from 'primeng/tag';
+import { RunningTimeComponent } from '../../shared/pipes/running-time.pipe';
+import { VotesCountPipe } from '../../shared/pipes/votes-count.pipe';
 
 @Component({
   selector: 'top-imdb-movies-list',
@@ -19,7 +17,11 @@ import {Tag} from 'primeng/tag';
     Card,
     Image,
     NgForOf,
-    Tag
+    Tag,
+    RunningTimeComponent,
+    Chip,
+    Ripple,
+    VotesCountPipe
   ],
 
 })
