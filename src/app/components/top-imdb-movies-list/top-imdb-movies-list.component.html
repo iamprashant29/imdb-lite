@@ -1,44 +1,5 @@
-<div class="main-container">
-  <div class="header">
-    <h1>IMDB Top 250 movies</h1>
-    <h4>As rated by regular IMDB users.</h4>
-  </div>
-  <div class="list-container" *ngFor="let movie of imdbTopMoviesList; let i = index;">
-    <p-card>
-      <div class="list-container__card">
-        <div class="list-container__card__content">
-          <div class="list-container__card__content__image">
-            <p-image
-              src="{{ movie?.primaryImage }}"
-              alt="Image"
-              width="120"/>
-          </div>
-
-          <div class="list-container__card__content__details">
-            <p-tag severity="contrast" value="{{ i + 1 }}" />
-            <span class="title">{{ movie?.primaryTitle }}</span>
-            <span class="movie-details">
-              <span>{{ movie?.startYear }}</span>
-              <span>{{ movie?.runtimeMinutes | runningTime }}</span>
-              <span>{{ movie?.contentRating }}</span>
-            </span>
-            <span class="movie-details">
-              <ng-container *ngFor="let genre of movie?.genres">
-                <p-chip pRipple label="{{ genre }}"></p-chip>
-              </ng-container>
-            </span>
-            <span>
-              <i class="pi pi-star-fill"></i> {{ movie?.averageRating }}
-                <span>({{ movie?.numVotes | votesCount }})</span>
-            </span>
-          </div>
-        </div>
-
-        <div class="list-container__card__info">
-          <p-button icon="pi pi-info-circle" severity="secondary" [rounded]="true" />
-        </div>
-      </div>
-    </p-card>
-  </div>
-</div>
-
+<item-list *ngIf="imdbTopMoviesList"
+           [title]="title"
+           [subtitle]="subtitle"
+           [itemsList]="imdbTopMoviesList"
+></item-list>
