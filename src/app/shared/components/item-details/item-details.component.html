@@ -1,0 +1,21 @@
+<div class="main-container">
+  <div class="header">
+    <div class="header__title">
+      {{ itemDetails?.primaryTitle }}
+      <span class="header__subtitle">
+        <p-tag pRipple severity="secondary" value="{{ itemDetails?.startYear }}" />
+        <p-tag pRipple severity="secondary" value="{{ itemDetails?.contentRating }}" />
+        <p-tag pRipple severity="secondary" value="{{ itemDetails?.runtimeMinutes | runningTime }}" />
+      </span>
+    </div>
+    <div class="header__rating">
+      <span>IMDB Rating</span>
+      <span>
+        <i class="pi pi-star-fill"></i>
+        {{ itemDetails?.averageRating }}/10
+        <span>({{ itemDetails?.numVotes | votesCount }})</span>
+      </span>
+    </div>
+  </div>
+</div>
+

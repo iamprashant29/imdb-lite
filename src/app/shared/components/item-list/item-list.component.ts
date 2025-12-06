@@ -5,9 +5,10 @@ import { Chip } from 'primeng/chip';
 import { Image } from 'primeng/image';
 import { NgForOf } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
-import { RunningTimeComponent } from '../../pipes/running-time.pipe';
+import { RunningTimePipe } from '../../pipes/running-time.pipe';
 import { Tag } from 'primeng/tag';
 import { VotesCountPipe } from '../../pipes/votes-count.pipe';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -21,15 +22,22 @@ import { VotesCountPipe } from '../../pipes/votes-count.pipe';
     Image,
     NgForOf,
     Ripple,
-    RunningTimeComponent,
+    RunningTimePipe,
     Tag,
     VotesCountPipe
   ]
 })
 export class ItemListComponent {
+  constructor(private route: ActivatedRoute,
+              private router: Router) {}
+
   @Input() title: string | undefined;
 
   @Input() subtitle: string | undefined;
 
   @Input() itemsList: any[] | undefined;
+
+  viewSelectedMovieDetails(movieId: string): void {
+    this.router.navigate([`/details/${movieId}`], { relativeTo: this.route.root }).then();
+  }
 }

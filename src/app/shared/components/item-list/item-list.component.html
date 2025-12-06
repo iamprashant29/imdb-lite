@@ -7,7 +7,7 @@
     <p-card>
       <div class="list-container__card">
         <div class="list-container__card__content">
-          <div class="list-container__card__content__image">
+          <div class="list-container__card__content__image" (click)="viewSelectedMovieDetails(item?.id)">
             <p-image
               src="{{ item?.primaryImage }}"
               alt="Image"
@@ -16,7 +16,7 @@
 
           <div class="list-container__card__content__details">
             <p-tag severity="contrast" value="{{ i + 1 }}" />
-            <span class="title">{{ item?.primaryTitle }}</span>
+            <span class="title" (click)="viewSelectedMovieDetails(item?.id)">{{ item?.primaryTitle }}</span>
             <span class="item-details">
               <span>{{ item?.startYear }}</span>
               <span>{{ item?.runtimeMinutes | runningTime }}</span>

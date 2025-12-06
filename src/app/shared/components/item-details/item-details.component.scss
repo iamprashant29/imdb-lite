@@ -1,0 +1,58 @@
+@import "../../../shared/_variables";
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  margin-left: 24px;
+  width: 80%;
+
+  .header {
+    display: flex;
+    color: map-get($colors, white);
+
+
+    &__title {
+      font-size: 48px;
+      flex-basis: 60%;
+    }
+
+    &__subtitle {
+      display: block;
+      padding: 0;
+      color: map-get($colors, white);
+      font-size: 24px;
+
+      p-tag {
+        &:not(:first-child) {
+          margin-left: 12px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__rating {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+
+      .pi-star-fill {
+        font-size: 30px;
+        color: map-get($colors, yellow);
+      }
+
+      span:first-child {
+        font-weight: bold;
+      }
+
+      span:nth-child(2) {
+        font-size: 30px;
+      }
+    }
+  }
+
+}
