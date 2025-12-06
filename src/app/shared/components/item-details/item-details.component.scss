@@ -10,7 +10,7 @@
   .header {
     display: flex;
     color: map-get($colors, white);
-
+    align-items: center;
 
     &__title {
       font-size: 48px;
@@ -37,7 +37,6 @@
     &__rating {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       gap: 6px;
 
       .pi-star-fill {
@@ -45,12 +44,20 @@
         color: map-get($colors, yellow);
       }
 
-      span:first-child {
-        font-weight: bold;
-      }
+      span {
+        &:first-child {
+          font-size: 15px;
+          font-weight: bold;
+        }
 
-      span:nth-child(2) {
-        font-size: 30px;
+        &:nth-child(2) {
+          font-size: 30px;
+        }
+
+        &:nth-child(3) {
+          font-size: 15px;
+          font-weight: bold;
+        }
       }
     }
   }
