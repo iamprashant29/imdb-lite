@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet} from '@angular/router';
 import { Chip } from 'primeng/chip';
 import { IconField } from 'primeng/iconfield';
 import { Image } from 'primeng/image';
@@ -19,11 +19,17 @@ export class AppComponent {
   title = 'imdb-lite';
   showMenu = false;
 
+  constructor(private router: Router) {}
+
   onMenuClick() {
     this.showMenu = true;
   }
 
   onMenuClose() {
     this.showMenu = false;
+  }
+
+  navigateToHome() {
+    this.router.navigate(['/']).then();
   }
 }

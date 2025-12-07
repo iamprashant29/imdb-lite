@@ -35,6 +35,12 @@
       }
     }
 
+    p-image {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
     p-iconfield {
       input {
         width: 500px !important;
@@ -54,3 +60,4 @@ mega-menu {
   z-index: 10;
   background-color: lighten(map-get($colors, black), 20%);
 }
+

@@ -3,6 +3,10 @@ import { RunningTimePipe } from '../../pipes/running-time.pipe';
 import { Tag } from 'primeng/tag';
 import { Ripple } from 'primeng/ripple';
 import { VotesCountPipe } from '../../pipes/votes-count.pipe';
+import {Image} from 'primeng/image';
+import {YouTubePlayer} from '@angular/youtube-player';
+import {Chip} from 'primeng/chip';
+import {NgForOf} from '@angular/common';
 
 
 @Component({
@@ -12,14 +16,22 @@ import { VotesCountPipe } from '../../pipes/votes-count.pipe';
     RunningTimePipe,
     Tag,
     Ripple,
-    VotesCountPipe
+    VotesCountPipe,
+    Image,
+    YouTubePlayer,
+    Chip,
+    NgForOf
   ],
   styleUrl: './item-details.component.scss'
 })
 export class ItemListComponent implements OnInit {
   @Input() itemDetails: any;
 
+  trailerId: string | undefined;
+
   ngOnInit() {
     console.log(this.itemDetails);
+    this.trailerId = this.itemDetails && this.itemDetails.trailer?
+      this.itemDetails.trailer.split('=')[1] : '';
   }
 }

@@ -6,6 +6,7 @@
   margin-top: 90px;
   margin-left: 24px;
   width: 80%;
+  gap: 18px;
 
   .header {
     display: flex;
@@ -62,4 +63,50 @@
     }
   }
 
+  .media-content {
+    display: flex;
+    gap: 6px;
+
+    p-image {
+      border-radius: 5px;
+    }
+
+    youtube-player {
+      border-radius: 5px;
+    }
+  }
+
+  .item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__genre {
+      display: flex;
+      gap: 6px;
+
+      p-chip {
+        &:hover {
+          cursor: pointer;
+        }
+        background: map-get($colors, yellow);
+      }
+    }
+
+    &__description {
+      color: map-get($colors, white);
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  ::ng-deep {
+    img {
+      border-radius: 10px;
+    }
+
+    iframe, youtube-player-placeholder {
+      border-radius: 10px;
+    }
+  }
 }

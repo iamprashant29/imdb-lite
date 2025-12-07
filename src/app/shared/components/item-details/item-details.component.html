@@ -17,5 +17,37 @@
       <span>({{ itemDetails?.numVotes | votesCount }})</span>
     </div>
   </div>
+  <div class="media-content">
+    <div class="media-content__image">
+      <p-image
+        src="{{ itemDetails?.primaryImage }}"
+        alt="Image"
+        width="250"
+        height="400"/>
+    </div>
+
+    <div class="media-content__video">
+      <youtube-player [videoId]="trailerId"
+                      [placeholderImageQuality]="'high'"
+                      [suggestedQuality]="'hd1080'"
+                      [width]="800"
+                      [height]="'400'"
+                      [playerVars]="{ 'autoplay': 1, mute: 1 }"
+      ></youtube-player>
+    </div>
+  </div>
+
+  <div class="item-details">
+    <div class="item-details__genre">
+      <ng-container *ngFor="let genre of itemDetails?.interests">
+        <p-chip pRipple label="{{ genre }}"></p-chip>
+      </ng-container>
+    </div>
+
+    <div class="item-details__description">
+      {{ itemDetails?.description }}
+    </div>
+  </div>
 </div>
 
+<!-- [playerVars]="{ 'autoplay': 1, mute: 1 } -->
