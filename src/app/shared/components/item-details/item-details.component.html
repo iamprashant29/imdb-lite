@@ -44,10 +44,54 @@
       </ng-container>
     </div>
 
+    <p-divider />
+    
     <div class="item-details__description">
       {{ itemDetails?.description }}
     </div>
+
+    <p-divider />
+
+    <div class="item-details__section">
+      <span>Director</span>
+      <div class="list">
+        <ng-container *ngFor="let director of itemDetails?.directors">
+          <a target="_blank" href="{{ director.url }}">
+            {{ director.fullName }}
+          </a>
+        </ng-container>
+      </div>
+    </div>
+
+    <p-divider />
+
+    <div class="item-details__section">
+      <span>Stars</span>
+      <div class="list">
+        <ng-container *ngFor="let member of itemDetails?.cast">
+          <a target="_blank" href="{{ member.url }}">
+            {{ member.fullName }}
+          </a>
+        </ng-container>
+      </div>
+
+      </div>
+    </div>
+
+  <p-divider />
+
+  <div class="item-details__section">
+    <span>Writers</span>
+    <div class="list">
+      <ng-container *ngFor="let writer of itemDetails?.writers">
+        <a target="_blank" href="{{ writer.url }}">
+          {{ writer.fullName }}
+        </a>
+      </ng-container>
+    </div>
   </div>
+
+  <p-divider />
 </div>
 
 <!-- [playerVars]="{ 'autoplay': 1, mute: 1 } -->
