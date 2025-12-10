@@ -6,7 +6,7 @@ import { VotesCountPipe } from '../../pipes/votes-count.pipe';
 import { Image } from 'primeng/image';
 import { YouTubePlayer } from '@angular/youtube-player';
 import { Chip } from 'primeng/chip';
-import { NgForOf } from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 import { Divider } from 'primeng/divider';
 
 
@@ -23,7 +23,8 @@ import { Divider } from 'primeng/divider';
     YouTubePlayer,
     Chip,
     NgForOf,
-    Divider
+    Divider,
+    NgIf
   ]
 })
 export class ItemListComponent implements OnInit {

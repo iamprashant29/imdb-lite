@@ -19,40 +19,69 @@ export class MegaMenuComponent implements OnInit {
       {
         label: 'Movies',
         items: [
-          'Upcoming Releases',
-          'Most Popular',
-          'Top Bollywood Movies',
-          'Top Hollywood Movies',
-          'IMDB Top 250 Movies',
-          'Documentary Movies',
-          'Browse Movies by Genre'
+          {
+            title: 'IMDB Top 250 Movies',
+            url: '/home'
+          },
+          {
+            title: 'Most Popular movies',
+            url: 'home'
+          },
+          {
+            title: 'Top Hollywood Movies',
+            url: 'home'
+          },
+          {
+            title: 'Top Bollywood Movies',
+            url: 'home'
+          }
         ]
       },
       {
         label: 'TV Shows',
         items: [
-          'Upcoming TV Shows',
-          'Most Popular TV Shows Worldwide',
-          'Indian TV Shows',
-          'American TV Shows',
-          'Browse TV Shows by Genre'
+          {
+            title: 'IMDB Top 250 TV Shows',
+            url: 'home/imdb-top-250-tv-shows'
+          },
+          {
+            title: 'Most Popular TV Shows',
+            url: 'home/imdb-top-250-tv-shows'
+          }
         ]
       },
       {
         label: 'Celebs',
         items: [
-          'Top 10 IMDB Celebs',
-          'Most Popular Celebs',
-          'New Stars'
+          {
+            title: 'Top 10 IMDB Celebs',
+            url: 'home'
+          },
+          {
+            title: 'Most Popular Celebs',
+            url: 'home'
+          },
+          {
+            title: 'New Stars',
+            url: 'home'
+          }
         ]
       },
       {
         label: 'Awards and Recognitions',
         items: [
-          'Oscars',
-          'Grammy',
-          'FilmFare',
-          'Events'
+          {
+            title: 'Oscars',
+            url: 'home'
+          },
+          {
+            title: 'Grammy',
+            url: 'home'
+          },
+          {
+            title: 'FilmFare',
+            url: 'home'
+          }
         ]
       }
     ];

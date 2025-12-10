@@ -27,7 +27,6 @@ export class TopImdbMoviesListComponent implements OnInit {
   private getTopImdbMoviesList(): void {
     this.moviesService.getImdbTopMovies().subscribe((movies) => {
       this.imdbTopMoviesList = movies;
-      console.log(this.imdbTopMoviesList);
     })
   }
 }

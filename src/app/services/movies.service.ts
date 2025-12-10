@@ -23,4 +23,16 @@ export class MoviesService extends BaseService {
     };
     return this.httpClient?.get<any>(apiUrl, requestOptions);
   }
+
+  /**
+   * Gets IMDB Top 250 TV Shows list
+   * @returns Observable<any>
+   **/
+  getImdbTopTvShows(): Observable<any> {
+    const apiUrl = `${ApiConstants.constants.IMDB_TOP_250_TV_SHOWS}`;
+    const requestOptions = {
+      headers: ApiConstants.API_HEADERS
+    };
+    return this.httpClient?.get<any>(apiUrl, requestOptions);
+  }
 }

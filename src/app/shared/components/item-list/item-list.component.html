@@ -19,8 +19,8 @@
             <span class="title" (click)="viewSelectedMovieDetails(item?.id)">{{ item?.primaryTitle }}</span>
             <span class="item-details">
               <span>{{ item?.startYear }}</span>
-              <span>{{ item?.runtimeMinutes | runningTime }}</span>
-              <span>{{ item?.contentRating }}</span>
+              <span *ngIf="item?.runtimeMinutes">{{ item?.runtimeMinutes | runningTime }}</span>
+              <span *ngIf="item?.contentRating">{{ item?.contentRating }}</span>
             </span>
             <span class="item-details">
               <ng-container *ngFor="let genre of item?.genres">

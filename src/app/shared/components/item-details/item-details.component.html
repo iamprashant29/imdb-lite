@@ -4,8 +4,10 @@
       {{ itemDetails?.primaryTitle }}
       <span class="header__subtitle">
         <p-tag pRipple severity="secondary" value="{{ itemDetails?.startYear }}" />
-        <p-tag pRipple severity="secondary" value="{{ itemDetails?.contentRating }}" />
-        <p-tag pRipple severity="secondary" value="{{ itemDetails?.runtimeMinutes | runningTime }}" />
+        <p-tag *ngIf="itemDetails?.contentRating" pRipple severity="secondary" value="{{ itemDetails?.contentRating }}" />
+        <p-tag *ngIf="itemDetails?.runtimeMinutes" pRipple severity="secondary" value="{{ itemDetails?.runtimeMinutes | runningTime }}" />
+        <p-tag *ngIf="itemDetails?.totalSeasons" pRipple severity="secondary" value="{{ itemDetails?.totalSeasons }} Seasons" />
+        <p-tag *ngIf="itemDetails?.totalEpisodes" pRipple severity="secondary" value="{{ itemDetails?.totalEpisodes }} Episodes" />
       </span>
     </div>
     <div class="header__rating">
@@ -45,7 +47,7 @@
     </div>
 
     <p-divider />
-    
+
     <div class="item-details__description">
       {{ itemDetails?.description }}
     </div>
