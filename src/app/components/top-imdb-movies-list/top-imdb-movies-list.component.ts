@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
 import { NgIf } from '@angular/common';
 import { ItemListComponent } from '../../shared/components/item-list/item-list.component';
+import { ListSkeletonLoaderComponent } from '../../shared/components/skeleton-loader/list-skeleton-loader.component';
 
 @Component({
   selector: 'top-imdb-movies-list',
   templateUrl: './top-imdb-movies-list.component.html',
-  styleUrls: ['./top-imdb-movies-list.component.scss'],
   imports: [
     ItemListComponent,
-    NgIf
+    NgIf,
+    ListSkeletonLoaderComponent
   ],
 
 })
@@ -26,7 +27,9 @@ export class TopImdbMoviesListComponent implements OnInit {
 
   private getTopImdbMoviesList(): void {
     this.moviesService.getImdbTopMovies().subscribe((movies) => {
-      this.imdbTopMoviesList = movies;
+      setTimeout(() => {
+        this.imdbTopMoviesList = movies;
+      }, 1000)
     })
   }
 }

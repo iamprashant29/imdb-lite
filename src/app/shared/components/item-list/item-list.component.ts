@@ -3,7 +3,7 @@ import { Button } from 'primeng/button';
 import { Card } from 'primeng/card';
 import { Chip } from 'primeng/chip';
 import { Image } from 'primeng/image';
-import { NgForOf } from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
 import { Ripple } from 'primeng/ripple';
 import { RunningTimePipe } from '../../pipes/running-time.pipe';
 import { Tag } from 'primeng/tag';
@@ -24,7 +24,8 @@ import { ActivatedRoute, Router } from '@angular/router';
     Ripple,
     RunningTimePipe,
     Tag,
-    VotesCountPipe
+    VotesCountPipe,
+    NgIf
   ]
 })
 export class ItemListComponent {
