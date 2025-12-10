@@ -5,7 +5,7 @@
       <div class="menu-container__items__section">
         <h2>{{ categories?.label }}</h2>
         <ng-container *ngFor="let item of categories?.items; let i = index;">
-          <a>{{ item }}</a>
+          <a href="{{ item.url }}">{{ item?.title }}</a>
         </ng-container>
       </div>
     </ng-container>

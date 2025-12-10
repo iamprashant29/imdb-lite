@@ -6,6 +6,7 @@ export class ApiConstants {
   }
 
   static constants  = {
-    IMDB_TOP_250_MOVIES: `${ApiConstants.BASE_URL}/top250-movies`
+    IMDB_TOP_250_MOVIES: `${ApiConstants.BASE_URL}/top250-movies`,
+    IMDB_TOP_250_TV_SHOWS: `${ApiConstants.BASE_URL}/top250-tv`
   };
 }

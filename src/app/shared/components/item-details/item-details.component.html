@@ -1,0 +1,99 @@
+<div class="main-container">
+  <div class="header">
+    <div class="header__title">
+      {{ itemDetails?.primaryTitle }}
+      <span class="header__subtitle">
+        <p-tag pRipple severity="secondary" value="{{ itemDetails?.startYear }}" />
+        <p-tag *ngIf="itemDetails?.contentRating" pRipple severity="secondary" value="{{ itemDetails?.contentRating }}" />
+        <p-tag *ngIf="itemDetails?.runtimeMinutes" pRipple severity="secondary" value="{{ itemDetails?.runtimeMinutes | runningTime }}" />
+        <p-tag *ngIf="itemDetails?.totalSeasons" pRipple severity="secondary" value="{{ itemDetails?.totalSeasons }} Seasons" />
+        <p-tag *ngIf="itemDetails?.totalEpisodes" pRipple severity="secondary" value="{{ itemDetails?.totalEpisodes }} Episodes" />
+      </span>
+    </div>
+    <div class="header__rating">
+      <span>IMDB Rating</span>
+      <span>
+        <i class="pi pi-star-fill"></i>
+        {{ itemDetails?.averageRating }}<span style="font-size: 18px">/10 </span>
+      </span>
+      <span>({{ itemDetails?.numVotes | votesCount }})</span>
+    </div>
+  </div>
+  <div class="media-content">
+    <div class="media-content__image">
+      <p-image
+        src="{{ itemDetails?.primaryImage }}"
+        alt="Image"
+        width="250"
+        height="400"/>
+    </div>
+
+    <div class="media-content__video">
+      <youtube-player [videoId]="trailerId"
+                      [placeholderImageQuality]="'high'"
+                      [suggestedQuality]="'hd1080'"
+                      [width]="800"
+                      [height]="'400'"
+                      [playerVars]="{ 'autoplay': 1, mute: 1 }"
+      ></youtube-player>
+    </div>
+  </div>
+
+  <div class="item-details">
+    <div class="item-details__genre">
+      <ng-container *ngFor="let genre of itemDetails?.interests">
+        <p-chip pRipple label="{{ genre }}"></p-chip>
+      </ng-container>
+    </div>
+
+    <p-divider />
+
+    <div class="item-details__description">
+      {{ itemDetails?.description }}
+    </div>
+
+    <p-divider />
+
+    <div class="item-details__section">
+      <span>Director</span>
+      <div class="list">
+        <ng-container *ngFor="let director of itemDetails?.directors">
+          <a target="_blank" href="{{ director.url }}">
+            {{ director.fullName }}
+          </a>
+        </ng-container>
+      </div>
+    </div>
+
+    <p-divider />
+
+    <div class="item-details__section">
+      <span>Stars</span>
+      <div class="list">
+        <ng-container *ngFor="let member of itemDetails?.cast">
+          <a target="_blank" href="{{ member.url }}">
+            {{ member.fullName }}
+          </a>
+        </ng-container>
+      </div>
+
+      </div>
+    </div>
+
+  <p-divider />
+
+  <div class="item-details__section">
+    <span>Writers</span>
+    <div class="list">
+      <ng-container *ngFor="let writer of itemDetails?.writers">
+        <a target="_blank" href="{{ writer.url }}">
+          {{ writer.fullName }}
+        </a>
+      </ng-container>
+    </div>
+  </div>
+
+  <p-divider />
+</div>
+
+<!-- [playerVars]="{ 'autoplay': 1, mute: 1 } -->
