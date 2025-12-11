@@ -3,7 +3,7 @@ import { Button } from 'primeng/button';
 import { Card } from 'primeng/card';
 import { Chip } from 'primeng/chip';
 import { Image } from 'primeng/image';
-import {NgForOf, NgIf} from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
 import { RunningTimePipe } from '../../pipes/running-time.pipe';
 import { Tag } from 'primeng/tag';
@@ -34,7 +34,7 @@ export class ItemListComponent {
 
   @Input() title: string | undefined;
 
-  @Input() subtitle: string | undefined;
+  @Input() subtitle?: string | undefined;
 
   @Input() itemsList: any[] | undefined;
 

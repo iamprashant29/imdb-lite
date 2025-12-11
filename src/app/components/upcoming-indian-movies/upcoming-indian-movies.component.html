@@ -1,0 +1,6 @@
+<list-skeleton-loader *ngIf="!upcomingIndianMoviesList"></list-skeleton-loader>
+
+<item-list *ngIf="upcomingIndianMoviesList"
+           [title]="title"
+           [itemsList]="upcomingIndianMoviesList"
+></item-list>

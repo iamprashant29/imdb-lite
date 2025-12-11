@@ -1,0 +1,7 @@
+<list-skeleton-loader *ngIf="!imdbTopBollywoodMoviesList"></list-skeleton-loader>
+
+<item-list *ngIf="imdbTopBollywoodMoviesList"
+           [title]="title"
+           [subtitle]="subtitle"
+           [itemsList]="imdbTopBollywoodMoviesList"
+></item-list>

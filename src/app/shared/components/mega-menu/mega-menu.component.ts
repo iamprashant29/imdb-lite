@@ -21,19 +21,19 @@ export class MegaMenuComponent implements OnInit {
         items: [
           {
             title: 'IMDB Top 250 Movies',
-            url: '/home'
+            url: 'home/imdb-top-250-movies'
           },
           {
             title: 'Most Popular movies',
-            url: 'home'
+            url: 'home/most-popular-movies'
           },
           {
             title: 'Top Hollywood Movies',
-            url: 'home'
+            url: 'home/top-box-office'
           },
           {
             title: 'Top Bollywood Movies',
-            url: 'home'
+            url: 'home/top-bollywood-movies'
           }
         ]
       },
@@ -46,41 +46,28 @@ export class MegaMenuComponent implements OnInit {
           },
           {
             title: 'Most Popular TV Shows',
-            url: 'home/imdb-top-250-tv-shows'
+            url: 'home/most-popular-tv'
           }
         ]
       },
       {
-        label: 'Celebs',
+        label: 'India Spotlight',
         items: [
           {
-            title: 'Top 10 IMDB Celebs',
-            url: 'home'
+            title: 'Top Rated Indian Movies',
+            url: 'home/top-bollywood-movies'
           },
           {
-            title: 'Most Popular Celebs',
-            url: 'home'
+            title: 'Top Rated Tamil Movies',
+            url: 'home/top-rated-tamil-movies'
           },
           {
-            title: 'New Stars',
-            url: 'home'
-          }
-        ]
-      },
-      {
-        label: 'Awards and Recognitions',
-        items: [
-          {
-            title: 'Oscars',
-            url: 'home'
+            title: 'Top Rated Telugu Movies',
+            url: 'home/top-rated-telugu-movies'
           },
           {
-            title: 'Grammy',
-            url: 'home'
-          },
-          {
-            title: 'FilmFare',
-            url: 'home'
+            title: 'Top Rated Malayalam Movies',
+            url: 'home/top-rated-malayalam-movies'
           }
         ]
       }
