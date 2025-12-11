@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from '../../services/movies.service';
 import { NgIf } from '@angular/common';
+import { MoviesService } from '../../services/movies.service';
 import { ItemListComponent } from '../../shared/components/item-list/item-list.component';
 import { ListSkeletonLoaderComponent } from '../../shared/components/skeleton-loader/list-skeleton-loader/list-skeleton-loader.component';
 
 @Component({
-  selector: 'top-imdb-movies-list',
-  templateUrl: './top-imdb-movies-list.component.html',
+  selector: 'imdb-popular-movies',
+  templateUrl: './imdb-popular-movies.component.html',
   imports: [
     ItemListComponent,
     NgIf,
@@ -14,20 +14,20 @@ import { ListSkeletonLoaderComponent } from '../../shared/components/skeleton-lo
   ],
 
 })
-export class TopImdbMoviesListComponent implements OnInit {
-  title = 'IMDB Top 250 Movies';
+export class ImdbPopularMoviesComponent implements OnInit {
+  title = 'IMDB Most Popular Movies';
   subtitle = 'As rated by regular IMDB users';
-  imdbTopMoviesList: any[] | undefined;
+  imdbPopularMoviesList: any[] | undefined;
 
   constructor(private moviesService: MoviesService) {}
 
   ngOnInit(): void {
-    this.getTopImdbMoviesList();
+    this.getMostPopularMoviesList();
   }
 
-  private getTopImdbMoviesList(): void {
-    this.moviesService.getImdbTopMovies().subscribe((movies) => {
-      this.imdbTopMoviesList = movies;
+  private getMostPopularMoviesList(): void {
+    this.moviesService.getImdbMostPopularMovies().subscribe((movies) => {
+      this.imdbPopularMoviesList = movies;
     })
   }
 }

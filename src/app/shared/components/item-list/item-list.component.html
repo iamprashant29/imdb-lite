@@ -1,44 +1,58 @@
 <div class="main-container">
   <div class="header">
     <h1>{{ title }}</h1>
-    <h4>{{ subtitle }}</h4>
+    <h4 *ngIf="subtitle">{{ subtitle }}</h4>
   </div>
-  <div class="list-container" *ngFor="let item of itemsList; let i = index;">
-    <p-card>
-      <div class="list-container__card">
-        <div class="list-container__card__content">
-          <div class="list-container__card__content__image" (click)="viewSelectedMovieDetails(item?.id)">
-            <p-image
-              src="{{ item?.primaryImage }}"
-              alt="Image"
-              width="120"/>
-          </div>
 
-          <div class="list-container__card__content__details">
-            <p-tag severity="contrast" value="{{ i + 1 }}" />
-            <span class="title" (click)="viewSelectedMovieDetails(item?.id)">{{ item?.primaryTitle }}</span>
-            <span class="item-details">
+  <div class="main-container__section">
+    <div class="list-container">
+      <ng-container *ngFor="let item of itemsList; let i = index;">
+        <p-card>
+          <div class="list-container__card">
+            <div class="list-container__card__content">
+              <div class="list-container__card__content__image" (click)="viewSelectedMovieDetails(item?.id)">
+                <p-image
+                  src="{{ item?.primaryImage }}"
+                  alt="Image"
+                  width="120"/>
+              </div>
+
+              <div class="list-container__card__content__details">
+                <p-tag severity="contrast" value="{{ i + 1 }}" />
+                <span class="title" (click)="viewSelectedMovieDetails(item?.id)">{{ item?.primaryTitle }}</span>
+                <span class="item-details">
               <span>{{ item?.startYear }}</span>
               <span *ngIf="item?.runtimeMinutes">{{ item?.runtimeMinutes | runningTime }}</span>
               <span *ngIf="item?.contentRating">{{ item?.contentRating }}</span>
             </span>
-            <span class="item-details">
+                <span class="item-details">
               <ng-container *ngFor="let genre of item?.genres">
                 <p-chip pRipple label="{{ genre }}"></p-chip>
               </ng-container>
             </span>
-            <span>
+                <span *ngIf="item?.averageRating; else emptyRatingTemplate;">
               <i class="pi pi-star-fill"></i> {{ item?.averageRating }}
-              <span>({{ item?.numVotes | votesCount }})</span>
+                  <span *ngIf="item?.numVotes">({{ item?.numVotes | votesCount }})</span>
             </span>
-          </div>
-        </div>
+                <ng-template #emptyRatingTemplate>
+                  Rating Unavailable
+                </ng-template>
+              </div>
+            </div>
 
-        <div class="list-container__card__info">
-          <p-button icon="pi pi-info-circle" severity="secondary" [rounded]="true" />
-        </div>
-      </div>
-    </p-card>
+            <div class="list-container__card__info">
+              <p-button icon="pi pi-info-circle" severity="secondary" [rounded]="true" />
+            </div>
+          </div>
+        </p-card>
+      </ng-container>
+    </div>
+
+    <div class="info-container">
+      <p-message icon="pi pi-info-circle" severity="info">
+        The website is in progress. Search filter functionality is not supported as of now. Thank you for your patience.
+      </p-message>
+    </div>
   </div>
 </div>
 

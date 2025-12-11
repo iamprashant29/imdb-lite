@@ -1,0 +1,7 @@
+<list-skeleton-loader *ngIf="!imdbPopularMoviesList"></list-skeleton-loader>
+
+<item-list *ngIf="imdbPopularMoviesList"
+           [title]="title"
+           [subtitle]="subtitle"
+           [itemsList]="imdbPopularMoviesList"
+></item-list>

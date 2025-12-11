@@ -1,0 +1,15 @@
+<div class="skeleton">
+  <div class="skeleton__header">
+    <p-skeleton width="50%"/>
+    <p-skeleton width="20%"/>
+  </div>
+
+  <div class="skeleton__section">
+    <ng-container *ngFor="let i of [1,2,3,4,5]">
+      <div class="skeleton__section__card">
+        <p-skeleton width="120px" height="150px" />
+        <p-skeleton width="50%" height="150px" />
+      </div>
+    </ng-container>
+  </div>
+</div>

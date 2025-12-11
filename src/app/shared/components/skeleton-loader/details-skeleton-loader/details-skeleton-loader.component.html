@@ -1,0 +1,18 @@
+<div class="skeleton">
+  <div class="skeleton__header">
+    <p-skeleton width="50%"/>
+    <p-skeleton width="20%"/>
+  </div>
+
+  <div class="skeleton__section">
+    <div class="skeleton__section__media">
+      <p-skeleton width="20%" height="250px" />
+      <p-skeleton width="50%" height="250px" />
+    </div>
+    <div class="skeleton__section__content">
+      <ng-container *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">
+        <p-skeleton width="70%" height="24px"/>
+      </ng-container>
+    </div>
+  </div>
+</div>

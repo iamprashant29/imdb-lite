@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import {MovieDetailsComponent} from './components/movie-details/movie-details.component';
+import { ViewDetailsComponent } from './components/view-details/view-details.component';
 
 export const routes: Routes = [
   {
@@ -14,6 +14,6 @@ export const routes: Routes = [
   },
   {
     path: 'details/:id',
-    component: MovieDetailsComponent
+    component: ViewDetailsComponent
   },
 ];

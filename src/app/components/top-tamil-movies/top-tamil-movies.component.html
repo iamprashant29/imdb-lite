@@ -1,0 +1,7 @@
+<list-skeleton-loader *ngIf="!imdbTopTamilMoviesList"></list-skeleton-loader>
+
+<item-list *ngIf="imdbTopTamilMoviesList"
+           [title]="title"
+           [subtitle]="subtitle"
+           [itemsList]="imdbTopTamilMoviesList"
+></item-list>
