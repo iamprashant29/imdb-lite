@@ -3,6 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { ImdbService } from '../../shared/services/imdb.service';
 import { ItemListComponent } from '../../shared/components/item-details/item-details.component';
 import { NgIf } from '@angular/common';
+import {
+  DetailsSkeletonLoaderComponent
+} from '../../shared/components/skeleton-loader/details-skeleton-loader/details-skeleton-loader.component';
 
 @Component({
   selector: 'view-details',
@@ -10,7 +13,8 @@ import { NgIf } from '@angular/common';
   styleUrls: ['./view-details.component.scss'],
   imports: [
     ItemListComponent,
-    NgIf
+    NgIf,
+    DetailsSkeletonLoaderComponent
   ]
 })
 export class ViewDetailsComponent {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForOf, NgIf } from '@angular/common';
+import { NgForOf } from '@angular/common';
 import { Skeleton } from 'primeng/skeleton';
 
 @Component({
@@ -8,8 +8,7 @@ import { Skeleton } from 'primeng/skeleton';
   styleUrls: ['./list-skeleton-loader.component.scss'],
   imports: [
     Skeleton,
-    NgForOf,
-    NgIf
+    NgForOf
   ],
 
 })

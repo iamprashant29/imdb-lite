@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
 import { NgIf } from '@angular/common';
 import { ItemListComponent } from '../../shared/components/item-list/item-list.component';
-import {ListSkeletonLoaderComponent} from "../../shared/components/skeleton-loader/list-skeleton-loader.component";
+import {ListSkeletonLoaderComponent} from "../../shared/components/skeleton-loader/list-skeleton-loader/list-skeleton-loader.component";
 
 @Component({
   selector: 'top-imdb-tv-shows-list',

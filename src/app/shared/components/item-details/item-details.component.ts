@@ -9,7 +9,6 @@ import { Chip } from 'primeng/chip';
 import { NgForOf, NgIf } from '@angular/common';
 import { Divider } from 'primeng/divider';
 
-
 @Component({
   selector: 'item-details',
   templateUrl: './item-details.component.html',
@@ -33,6 +32,7 @@ export class ItemListComponent implements OnInit {
   trailerId: string | undefined;
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     console.log(this.itemDetails);
     this.trailerId = this.itemDetails && this.itemDetails.trailer?
       this.itemDetails.trailer.split('=')[1] : '';
