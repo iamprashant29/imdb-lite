@@ -10,100 +10,118 @@
   .header {
     color: map-get($colors, white);
   }
-}
 
-.list-container {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-
-  h2 {
-    color: map-get($colors, white);
-  }
-
-  margin-top: 12px;
-
-  &__card {
+  &__section {
     display: flex;
+    margin-top: 12px;
+    gap: 24px;
 
-    &__content {
+    .list-container {
       display: flex;
-      flex-basis: 80%;
+      flex-direction: column;
+      width: 60%;
       gap: 12px;
 
-      &__image {
-        border-radius: 5px;
-
-        &:hover {
-          cursor: pointer;
-        }
+      h2 {
+        color: map-get($colors, white);
       }
 
-      &__details {
+      &__card {
         display: flex;
-        flex-direction: column;
-        gap: 12px;
 
-        p-tag {
-          width: fit-content;
-        }
-
-        .title {
-          font-size: 18px;
-          font-weight: bold;
-          color: map-get($colors, black);
-
-          &:hover {
-            color: map-get($colors, gray);
-            cursor: pointer;
-          }
-        }
-
-        .item-details {
+        &__content {
           display: flex;
+          flex-basis: 80%;
           gap: 12px;
-          font-size: 15px;
-          font-weight: bold;
-          color: map-get($colors, gray);
 
-          p-chip {
+          &__image {
+            border-radius: 5px;
+
             &:hover {
               cursor: pointer;
             }
           }
+
+          &__details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            p-tag {
+              width: fit-content;
+            }
+
+            .title {
+              font-size: 18px;
+              font-weight: bold;
+              color: map-get($colors, black);
+
+              &:hover {
+                color: map-get($colors, gray);
+                cursor: pointer;
+              }
+            }
+
+            .item-details {
+              display: flex;
+              gap: 12px;
+              font-size: 15px;
+              font-weight: bold;
+              color: map-get($colors, gray);
+
+              p-chip {
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        &__info {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          i {
+            font-size: 24px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      ::ng-deep {
+        .p-card-body {
+          padding: 6px;
+        }
+
+        img {
+          border-radius: 5px;
+        }
+
+        .p-tag-contrast {
+          background: map-get($colors, dodgerblue);
+        }
+
+        .pi-star-fill {
+          color: map-get($colors, yellow);
         }
       }
     }
 
-    &__info {
+    .info-container {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      i {
-        font-size: 24px;
+      width: 40%;
+
+      .p-message-content {
+        padding: 24px;
       }
 
-      &:hover {
-        cursor: pointer;
+      .p-message-text {
+        margin-top: 12px;
       }
-    }
-  }
-
-  ::ng-deep {
-    .p-card-body {
-      padding: 6px;
-    }
-
-    img {
-      border-radius: 5px;
-    }
-
-    .p-tag-contrast {
-      background: map-get($colors, dodgerblue);
-    }
-
-    .pi-star-fill {
-      color: map-get($colors, yellow);
     }
   }
 }

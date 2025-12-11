@@ -9,6 +9,7 @@ import { RunningTimePipe } from '../../pipes/running-time.pipe';
 import { Tag } from 'primeng/tag';
 import { VotesCountPipe } from '../../pipes/votes-count.pipe';
 import { ActivatedRoute, Router } from '@angular/router';
+import {Message} from 'primeng/message';
 
 
 @Component({
@@ -25,7 +26,8 @@ import { ActivatedRoute, Router } from '@angular/router';
     RunningTimePipe,
     Tag,
     VotesCountPipe,
-    NgIf
+    NgIf,
+    Message
   ]
 })
 export class ItemListComponent {

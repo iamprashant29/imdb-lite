@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class VotesCountPipe implements PipeTransform {
   transform(totalVotes: number): string {
-    let votesCount;
+    let votesCount = totalVotes.toString();
     if (totalVotes >= 1e+3) {
       votesCount = (totalVotes / 1e+3).toFixed(1).replace(/\.0$/, '') + 'K';
     }
