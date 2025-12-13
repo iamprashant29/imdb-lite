@@ -8,7 +8,7 @@ The application is built using Angular v20, Typescript and RxJS, and leverages s
 
 Used CSS flexbox to provide the responsive layout and BEM methodology to organize CSS classes.
 
-**Note -** The website is continuously enhanced and is still is progress and some functionality like Search Filter is not supported yet.
+**Note -** The website is continuously being enhanced and is still is progress and some functionality like Search Filter is not supported yet.
 
 Demo Link - http://imdb-lite.s3-website.eu-central-1.amazonaws.com/
 
