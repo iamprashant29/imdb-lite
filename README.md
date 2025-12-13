@@ -1,6 +1,16 @@
 # ImdbLite
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+This project was generated using Angular CLI version 20.3.15.
+
+**IMDB Lite** is a web application that provides overview of the top cinemas around the world. Users can view the details of top Global Movies, TV Shows and movies from world's biggest movie industry in the world - **Bolllywood** . User can also search the database with the help of search funtionality. The app offers a clean, user-friendly interface and is built using modern web technologies, making it a great tool for exploring movies data in a user-friendly way.
+
+The application is built using Angular v20, Typescript and RxJS, and leverages some of the performance optimization techniques like lazy loading of the singleton components.
+
+Used CSS flexbox to provide the responsive layout and BEM methodology to organize CSS classes.
+
+**Note -** The website is continuously enhanced and is still is progress and some functionality like Search Filter is not supported yet.
+
+Demo Link - http://imdb-lite.s3-website.eu-central-1.amazonaws.com/
 
 ## Development server
 
@@ -57,3 +67,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Live Demo
+
+http://imdb-lite.s3-website.eu-central-1.amazonaws.com/
