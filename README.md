@@ -1,4 +1,4 @@
-# ImdbLite
+# IMDB Lite
 
 This project was generated using Angular CLI version 20.3.15.
 
